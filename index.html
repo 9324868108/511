@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freelance Platform - Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="logo">YourLogo</div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="#" class="nav-link active" data-target="dashboard-content">Dashboard</a></li>
+                    <li><a href="#" class="nav-link" data-target="post-job-content">Post New Job</a></li>
+                    <li><a href="#" class="nav-link" data-target="my-jobs-content">My Jobs</a></li>
+                    <li><a href="#" class="nav-link" data-target="messages-content">Messages</a></li>
+                    <li><a href="#" class="nav-link" data-target="settings-content">Settings</a></li>
+                </ul>
+            </nav>
+            <div class="logout-section">
+                <a href="#">Log Out</a>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="main-header">
+                <h1>Welcome Back, ClientName!</h1>
+                <div class="user-actions">
+                    <button class="notification-btn">🔔 (3)</button>
+                    <div class="user-profile">👤</div>
+                </div>
+            </header>
+
+            <div class="content-area">
+                <!-- Content sections will be dynamically shown/hidden -->
+                <section id="dashboard-content" class="content-section active">
+                    <h2>Dashboard Overview</h2>
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <h3>Active Jobs</h3>
+                            <p class="stat-value">5</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3>Pending Proposals</h3>
+                            <p class="stat-value">12</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3>Completed Projects</h3>
+                            <p class="stat-value">28</p>
+                        </div>
+                         <div class="stat-card">
+                            <h3>Spent Total</h3>
+                            <p class="stat-value">$4,500</p>
+                        </div>
+                    </div>
+                    <h3>Recent Activity</h3>
+                    <ul class="activity-list">
+                        <li>Freelancer 'Jane D.' submitted a proposal for 'Website Redesign'.</li>
+                        <li>You awarded the 'Logo Design' project to 'Mike S.'.</li>
+                        <li>Payment released for 'Blog Post Writing'.</li>
+                    </ul>
+                </section>
+
+                <section id="post-job-content" class="content-section">
+                    <h2>Post a New Job</h2>
+                    <form id="post-job-form">
+                        <div class="form-group">
+                            <label for="job-title">Job Title</label>
+                            <input type="text" id="job-title" name="jobTitle" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="job-description">Job Description</label>
+                            <textarea id="job-description" name="jobDescription" rows="6" required></textarea>
+                        </div>
+                         <div class="form-group">
+                            <label for="job-category">Category</label>
+                            <select id="job-category" name="jobCategory" required>
+                                <option value="">-- Select Category --</option>
+                                <option value="dev">Web Development</option>
+                                <option value="design">Graphic Design</option>
+                                <option value="writing">Writing & Translation</option>
+                                <option value="marketing">Digital Marketing</option>
+                            </select>
+                        </div>
+                         <div class="form-group">
+                            <label for="job-budget">Budget ($)</label>
+                            <input type="number" id="job-budget" name="jobBudget" min="5" placeholder="e.g., 500" required>
+                        </div>
+                         <div class="form-group">
+                            <label for="job-skills">Required Skills (comma-separated)</label>
+                            <input type="text" id="job-skills" name="jobSkills" placeholder="e.g., HTML, CSS, JavaScript, SEO">
+                        </div>
+                         <div class="form-group">
+                            <label>Project Type</label>
+                             <label><input type="radio" name="projectType" value="fixed" checked> Fixed Price</label>
+                             <label><input type="radio" name="projectType" value="hourly"> Hourly</label>
+                        </div>
+                        <button type="submit" class="submit-btn">Post Job</button>
+                    </form>
+                    <div id="form-message" class="form-feedback"></div>
+                </section>
+
+                 <section id="my-jobs-content" class="content-section">
+                    <h2>My Posted Jobs</h2>
+                    <p>This section would list jobs posted by the client. (Not implemented in this example)</p>
+                    <!-- Placeholder for job list -->
+                </section>
+
+                 <section id="messages-content" class="content-section">
+                     <h2>Messages</h2>
+                     <p>This section would display conversations. (Not implemented)</p>
+                      <!-- Placeholder for messages UI -->
+                 </section>
+
+                <section id="settings-content" class="content-section">
+                     <h2>Settings</h2>
+                     <p>User profile and account settings would go here. (Not implemented)</p>
+                      <!-- Placeholder for settings form -->
+                 </section>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
